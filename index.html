@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Github profiles</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/profiles.css">
+</head>
+<body>
+	<form id="add_profile">
+		<input id="username" type="text" placeholder="Enter a github username">
+		<button type="submit">Load profile</button>
+	</form>
+
+	<ul class="user_errors"></ul>
+
+	<div class="profile_container">
+
+		<script class="profile_template" type="x-tmpl-mustache">
+		<div class="profile">
+			<div class="left">
+				<img src="{{ avatar_url }}" alt="{{ username }}">
+			</div>
+			<div class="right">
+				<h3><a href="{{ user_url }}">{{ username }}</a></h3>
+				<div class="info">
+					<h4>Repos: {{ public_repos }}</h4>
+					<h4>Followers: {{ followers_url }}</h4>
+				</div>
+			</div>
+		</div>
+		</script>
+	
+	</div>
+
+	<script src='https://code.jquery.com/jquery-2.0.3.min.js'></script>
+	<script src='assets/js/lib/mustache.js'></script>
+	<script src='assets/js/load_profiles.js'></script>
+</body>
+</html>

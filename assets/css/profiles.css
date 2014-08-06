@@ -1,0 +1,163 @@
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+	line-height: 1.4;
+}
+
+ul.user_errors {
+	padding: 0px;
+	margin: 10px auto
+	width: 40%;
+}
+
+ul.user_errors li {
+	padding: 0.3em 1em;
+	margin: 3px;
+
+    display: block;
+    background: #FA4453;
+}
+
+#add_profile {
+	text-align: center;
+}
+#add_profile input[type="text"],
+#add_profile button {
+	font-size: 30px;
+	padding: 0.3em 1em;
+	border: 0px;
+}
+
+#add_profile input[type="text"] {
+	width: 40%;
+
+	border-bottom: 1px solid #333333;
+	color: #333333;
+}
+#add_profile button {
+	background: #333;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+.profile_container {
+	margin: 0px auto;
+	width: 90%;
+	text-align: center;
+}
+.profile {
+	display: inline-block;
+	padding: 1em;
+	width: 40%;
+	margin: 5px;
+
+	background: #A9D394;
+	border-radius: 5px;
+
+	color: #333333;
+	overflow: auto;
+}
+.profile .left,
+.profile .right {
+	float: left;
+	text-align: left;
+}
+.profile .left {
+	width: 47%;
+}
+.profile .left img {
+	max-width: 100%;
+}
+.profile .right {
+	width: 53%;
+}
+
+.profile h3,
+.profile h4 {
+	margin: 0px 0px 5px 0px;
+}
+.profile h3 {
+	margin-right: -16px;
+}
+
+.profile a {
+	display: block;
+	background: #333;
+	padding: 0.3em 1em;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.profile a:hover {
+	background: #72AB7E;
+	color: #333;
+}
+.profile .info {
+	padding: 0.3em 1em;
+}
+
+
+/* pullDown effect - http://www.justinaguilar.com/animations/ */
+
+.profile_container .profile,
+.user_errors li,
+.pullDown{
+	animation-name: pullDown;
+	-webkit-animation-name: pullDown;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease-out;	
+	-webkit-animation-timing-function: ease-out;	
+
+	transform-origin: 50% 0%;
+	-ms-transform-origin: 50% 0%;
+	-webkit-transform-origin: 50% 0%; 		
+}
+
+@keyframes pullDown {
+	0% {
+		transform: scaleY(0.1);
+	}
+	40% {
+		transform: scaleY(1.02);
+	}
+	60% {
+		transform: scaleY(0.98);
+	}
+	80% {
+		transform: scaleY(1.01);
+	}
+	100% {
+		transform: scaleY(0.98);
+	}				
+	80% {
+		transform: scaleY(1.01);
+	}
+	100% {
+		transform: scaleY(1);
+	}							
+}
+
+@-webkit-keyframes pullDown {
+	0% {
+		-webkit-transform: scaleY(0.1);
+	}
+	40% {
+		-webkit-transform: scaleY(1.02);
+	}
+	60% {
+		-webkit-transform: scaleY(0.98);
+	}
+	80% {
+		-webkit-transform: scaleY(1.01);
+	}
+	100% {
+		-webkit-transform: scaleY(0.98);
+	}				
+	80% {
+		-webkit-transform: scaleY(1.01);
+	}
+	100% {
+		-webkit-transform: scaleY(1);
+	}		
+}
